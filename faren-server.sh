@@ -36,7 +36,7 @@ cat <<EOF > v2ray/config.json
   "inbounds": [
       {
         "listen": "0.0.0.0",
-        "port": 443,
+        "port": 2828,
         "protocol": "vmess",
         "settings": {
           "clients": [
@@ -119,7 +119,7 @@ VMESS=$(sed ':a; N; s/[[:space:]]//g; ta' <<<"$VMESS")
 
 cat <<EOF > ./upstream-install.log
   IP: $IP
-  PORT: 443
+  PORT: $port
   UUID: $UUID
   Transport: WS
   PATH: /graphql
